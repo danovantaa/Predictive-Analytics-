@@ -57,30 +57,31 @@ Dataset yang digunakan dalam proyek ini adalah kumpulan data berdasarkan rumus z
 ### Visualisasi Data dan analisis eksplorasi data (EDA)
 Untuk lebih memahami dataset ini, dilakukan visualisasi & eksplorasi data (EDA) dengan beberapa tahapan berikut:
 1. **Pie Chart** 
-- Tujuan: 
-- Deskripsi: 
+- Tujuan: Menampilkan distribusi proporsi dari masing-masing Status Gizi dan Jenis Kelamin dalam dataset.
+- Deskripsi: Pie chart ini menunjukkan persentase masing-masing Status Gizi dan Jenis Kelamin yang terdapat dalam dataset, memberi gambaran umum mengenai penyebaran data kategorikal.
 
 Hasil : <br>
-![download](https://github.com/danovantaa/Predictive-Analytics-/blob/7ec4e87d73b92880d01a5cbb1ed29ca9e1e7f76a/Screenshot%202025-01-13%20at%2019.50.31.png)
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/8fa96511631f8881f2e61d0ef0949200ae06c5f8/assets/Pie%20Chart%20Jenis%20Kelamin.png)
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/8fa96511631f8881f2e61d0ef0949200ae06c5f8/assets/Pie%20Chart%20Gizi.png)
 
 2. **Box Plot**
-- Tujuan :
-- Deskripsi :
+- Tujuan : Menampilkan distribusi dari kolom numerikal dan dapat digunakan untuk mendeteksi outlier, atau titik data yang tidak biasa
+- Deskripsi :Box plot adalah grafik yang meringkas sekumpulan data . Bentuk boxplot menunjukkan bagaimana data didistribusikan dan juga menunjukkan outlier apa pun. Ini adalah cara yang berguna untuk membandingkan sekumpulan data yang berbeda karena dapat menggambar lebih dari satu boxplot per grafik.
 Hasil : <br>
-![download]()
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/8fa96511631f8881f2e61d0ef0949200ae06c5f8/assets/Box%20Plot%20Umur.png)
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/8fa96511631f8881f2e61d0ef0949200ae06c5f8/assets/Box%20Plot%20TB.png)
 
 3. **Heatmap Korelasi**
-- Tujuan :
-- Deskripsi :
+- Tujuan :Menunjukkan hubungan antara dua atau lebih variabel dengan menggunakan warna untuk menunjukkan tingkat korelasi 
+- Deskripsi :Heatmap ini membantu kita memahami seberapa kuat hubungan antara Tinggi badan dan umur pada balita.
 Hasil : <br>
-![download]()
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/8fa96511631f8881f2e61d0ef0949200ae06c5f8/assets/Matrix%20Korelasi.png)
 
 4. **Bar Chart**
-- Tujuan :
-- Deskripsi :
+- Tujuan Melihat penyebaran data numerikal berbentuk batang
+- Deskripsi : Melihat Distriibusi dari variabel numerikal yaitu umur dengan tinggi badan pada balita
 Hasil : <br>
-![download]()
-
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/8fa96511631f8881f2e61d0ef0949200ae06c5f8/assets/Bar%20Chart%20Numeric.png)
 
 ## Data Preparation
 1. Menangani Duplikasi
@@ -94,20 +95,73 @@ Hasil : <br>
 5.  Normalisasi Data
 -- Pada proyek ini menggunakan **MinMaxScaler**, yaitu teknik normalisasi yang mentransformasikan nilai fitur atau variabel ke dalam rentang [0,1] yang berarti bahwa nilai minimum dan maksimum dari fitur/variabel masing-masing adalah 0 dan 1 
 
-
 ## Modeling
 Pada tahap modeling ini dibuat beberapa model dengan algoritma yang berbeda-beda. Pada proyek ini akan dibuat 4 model, diantaranya yaitu menggunakan KNN, Random Forest, SVM, dan Naive Bayes
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+### Kelebihan dan Kekurangan Setiap Algoritma
+
+#### 1. K-Nearest Neighbors (KNN)
+
+**Kelebihan :**
+- Sederhana: Mudah diimplementasikan dan dipahami.
+- Non-parametrik: Tidak membuat asumsi tentang distribusi data.
+- Adaptif: Performa meningkat dengan data yang relevan.
+
+**Kekurangan :**
+- Lambat untuk Dataset Besar: Memerlukan banyak waktu komputasi karena menghitung jarak setiap kali prediksi.
+- Peka terhadap Skala Fitur: Memerlukan normalisasi data (misalnya, MinMaxScaler).
+- Rentan terhadap Dimensionalitas Tinggi: Performanya menurun jika jumlah fitur sangat banyak.
+
+#### 2. Random Forest
+
+**Kelebihan :**
+- Kuat terhadap Overfitting: Kombinasi banyak pohon mengurangi risiko overfitting.
+- Fleksibel: Dapat digunakan untuk data kategori dan kontinu.
+- Feature Importance: Memberikan informasi tentang fitur mana yang paling penting.
+- Efektif untuk Dataset Besar: Dapat menangani data dengan banyak fitur.
+
+**Kekurangan :**
+- Kurang Interpretasi: Sulit memahami bagaimana model membuat prediksi.
+- Kompleksitas: Memerlukan tuning parameter seperti n_estimators, max_depth, dll.
+- Lambat untuk Prediksi Real-Time: Karena banyak pohon yang dihitung.
+
+#### 3. Support Vector Machine (SVM)
+
+**Kelebihan :**
+- Efektif untuk Dataset Kecil: Cocok untuk dataset dengan jumlah sampel kecil.
+- Kuat terhadap Dimensi Tinggi: Tetap bekerja dengan baik jika jumlah fitur sangat banyak.
+- Margin Maksimum: Memastikan prediksi dibuat dengan margin terbesar antara kelas.
+
+**Kekurangan :**
+- Tidak Efisien untuk Dataset Besar: Lambat untuk data besar karena menghitung kernel.
+- Memerlukan Scaling Data: Performa menurun jika fitur tidak distandarisasi.
+- Sulit Dituning: Parameter seperti C, gamma, dan kernel memerlukan tuning yang tepat.
+
+#### 4. Naive Bayes
+
+**Kelebihan :**
+- Cepat dan Efisien: Sangat cepat untuk dataset besar.
+- Mudah Diimplementasikan: Algoritma sederhana dengan asumsi probabilistik.
+- Cocok untuk Teks: Sangat efektif untuk data berbasis teks (misalnya, klasifikasi email spam).
+
+**Kekurangan :** 
+- Asumsi Independen: Asumsi bahwa fitur independen jarang benar di dunia nyata.
+- Kurang Akurat: Performa lebih rendah dibanding model lain jika asumsi independensi dilanggar.
+- Tidak Fleksibel: Tidak dapat menangani interaksi kompleks antar fitur.
+
+Ketika sudah melakukan di beberapa algoritma tersebut, bisa bandingkan algoritma mana yang terbaik dilihat dari akurasi yang paling tinggi yaitu pada model KNN ataupun Random forest yang keduanya memiliki akurasi sebesar 99% . lalu model yang palik buruk adalah Naive Baye dengan tingkat akurasinya hanya sampai 55%, berikut adalah diagram batang perbandingannya 
+
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/0d4d3708131d9b8694373df507747fa96fc3e5a9/assets/Hasil%20Model.png)
+
+-- | KNN | RandomForest | SVM | Naive Bayes
+--- | ---| --- | --- | ---
+**accuracy_score**  | 0.990615 | 0.990996 | 0.956246 | 0.550285 
 
 ## Evaluation
 
-Setelah mendapatkan beberapa model, maka dapat dibandingkan akurasi prediksinya untuk mendapatkan model dengan kinerja yang terbaik. Agar lebih mudah dapat menggunakan visualisasi seperti berikut.
+Pada proyek ini, model yang dibuat merupakan kasus klasifikasi dan menggunakan metriks akurasi.
 
+Akurasi merupakan kalkulasi presentase jumlah ketepatan prediksi dari jumlah seluruh data yang diprediksi. Nilai akurasi dapat dihitung dengan rumus berikut.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/015e2c73a3c9da362ef512f6e9b63c2c11e9f6c5/assets/rumus%20akurasi.png)
 
-**---Ini adalah bagian akhir laporan---**
