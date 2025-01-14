@@ -56,11 +56,30 @@ Dataset yang digunakan dalam proyek ini adalah kumpulan data berdasarkan rumus z
 
 ### Visualisasi Data dan analisis eksplorasi data (EDA)
 Untuk lebih memahami dataset ini, dilakukan visualisasi & eksplorasi data (EDA) dengan beberapa tahapan berikut:
-1. Bar Plot: 
+1. **Pie Chart** 
 - Tujuan: 
 - Deskripsi: 
 
-Hasil : 
+Hasil : <br>
+![download](https://github.com/danovantaa/Predictive-Analytics-/blob/7ec4e87d73b92880d01a5cbb1ed29ca9e1e7f76a/Screenshot%202025-01-13%20at%2019.50.31.png)
+
+2. **Box Plot**
+- Tujuan :
+- Deskripsi :
+Hasil : <br>
+![download]()
+
+3. **Heatmap Korelasi**
+- Tujuan :
+- Deskripsi :
+Hasil : <br>
+![download]()
+
+4. **Bar Chart**
+- Tujuan :
+- Deskripsi :
+Hasil : <br>
+![download]()
 
 
 ## Data Preparation
