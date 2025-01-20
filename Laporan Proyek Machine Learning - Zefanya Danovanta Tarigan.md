@@ -4,7 +4,7 @@
 Domain yang dipilih untuk proyek machine learning ini adalah Kesehatan, dengan judul **Predictive Analytics Deteksi Balita Stunting**
 
 **Latar Belakang**
-Stunting adalah kondisi terhambatnya pertumbuhan pada anak balita akibat kurang gizi kronis sehingga anak terlibat lebih pendek dari pertumbuhan usianya. Hal tersebut akan berdampak pada perkembangan anak, maka pemantauan pertumbuhan dan perkembang balita sangat penting dilakukan untuk mengetahui hambatan pertumbuhan sejak dini. Deteksi dini menjadi salah satu langkah paling penting dalam menangani stunting. Dengan mendeteksi stunting lebih awal, intervensi gizi dan perawatan medis dapat diberikan secara tepat waktu, sehingga risiko jangka panjang dapat diminimalkan. Namun, dalam praktiknya, deteksi stunting sering kali masih bergantung pada metode tradisional yang membutuhkan waktu lebih lama, dan kadang kurang efektif dalam menjangkau populasi yang luas.
+Stunting adalah kondisi terhambatnya pertumbuhan pada anak balita akibat kurang gizi kronis sehingga anak terlibat lebih pendek dari pertumbuhan usianya. Hal tersebut akan berdampak pada perkembangan anak, maka pemantauan pertumbuhan dan perkembangan balita sangat penting dilakukan untuk mengetahui hambatan pertumbuhan sejak dini [1]. Deteksi dini menjadi salah satu langkah paling penting dalam menangani stunting. Dengan mendeteksi stunting lebih awal, intervensi gizi dan perawatan medis dapat diberikan secara tepat waktu, sehingga risiko jangka panjang dapat diminimalkan [2]. Namun, dalam praktiknya, deteksi stunting sering kali masih bergantung pada metode tradisional yang membutuhkan waktu lebih lama, dan kadang kurang efektif dalam menjangkau populasi yang luas [3].
 
 Dengan perkembangan teknologi, khususnya dalam bidang data science dan machine learning, kini dimungkinkan untuk membuat sistem otomatis yang mampu mendeteksi status gizi balita secara cepat dan akurat. Melalui analisis data seperti umur, jenis kelamin, dan tinggi badan balita, model prediktif berbasis machine learning dapat membantu petugas kesehatan untuk menentukan status gizi balita, termasuk mendeteksi risiko stunting.
 
@@ -15,11 +15,9 @@ Proyek “Stunting Toddler Detection” ini bertujuan untuk membangun sistem pre
 2.  Dengan menggunakan data seperti umur, jenis kelamin, dan tinggi badan balita, sistem dapat memberikan prediksi status gizi yang objektif dan terstandar berdasarkan panduan WHO.
 
 **Referensi**
-1. [DETEKSI DINI STUNTING DALAM UPAYA PENCEGAHAN STUNTING PADA BALITA DI DESA DURIN TONGGAL, PANCUR BATU, SUMATERA UTARA](https://e-journal.sari-mutiara.ac.id/index.php/JAM/article/view/1091)
-2. [Analisis Efisiensi Metode K-Nearest Neighbor dan Forward Chaining
-Untuk Prediksi Stunting Pada Balita](https://d1wqtxts1xzle7.cloudfront.net/105901463/pdf-libre.pdf?1695532353=&response-content-disposition=inline%3B+filename%3DAnalisis_Efisiensi_Metode_K_Nearest_Neig.pdf&Expires=1736772596&Signature=ASefkL7BZ9gJYRklv-7Tvu6B-aAh6DwGxqM5M1vqvuH5fowokrZg0uo8MdRr4iexuIJIMR~fKi88A-6Oq3Y43dTV37oOvfXJScdZXXHMzYsvjeo3jmNXfrfhjwDbEBK9APLlvvnCsDn2lC5rMzlfG~AvOco-fCn9WvN5jdFJlx~H4nifFTWfVr~zWujKjZNCPozXzrkR0zj7rmhpe06MLewPpDrm5GeSALIkFeEJxW-Uk~AWph67B1z~RzFJylIx12HwTCFJO1yKn5a~M3cHtsU-jkvVuBCcK8gsYwsucZ9v48BdsPhziwvur~HO4-607pID2jT4hUpgIGjNazTRCw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
-3. [PENERAPAN ALGORITMA DECISION TREE, SVM, NAÏVE BAYES DALAM DETEKSI STUNTING PADA BALITA](https://ejurnal.methodist.ac.id/index.php/methomika/article/view/2774)
-
+- [1] S. E. Martina and R. Siregar, “Deteksi Dini Stunting Dalam Upaya Pencegahan Stunting Pada Balita di Desa Durin Tonggal, Pancur Batu, Sumatera Utara,” Jurnal Abdimas Mutiara, Vol 1, No. 1 Maret 2020. [Online](https://e-journal.sari-mutiara.ac.id/index.php/JAM/article/view/1091)
+- [2] H. G. Pangestu, R. Y. Sinaga , F. Z. Ulya, U. Athiyah, A. W. Muhammad and F. Alameka, “Analisis Efisiensi Metode K-Nearest Neighbor dan Forward Chaining Untuk Prediksi Stunting Pada Balita,” Vol. 18, No. 2 September 2023. [Online](https://d1wqtxts1xzle7.cloudfront.net/105901463/pdf-libre.pdf?1695532353=&response-content-disposition=inline%3B+filename%3DAnalisis_Efisiensi_Metode_K_Nearest_Neig.pdf&Expires=1737379663&Signature=Rz-XdiJkFvvDw5dcy7OrU-yxOpisH~wHpftNWLk~o-madeikW2VkrWRptsHWlFqx7VUpLuqhRHDEDE9a2Ckkjaga-UvqMqQdh0haKJG4Irii3oYP6~BGvrGz3J73AT7UFkGa54lQkGhrGq5L2jlvxid8qwzauN5WqEgk6qx3fVkfaz43Mazsgg3yQBkCfrhoKqvF6Z7vSp6jxbcwDMnRQu0tg1KBxpSQgQli-27sz1UPmQBfK9CTj6UivJOu0T4weODRRmDdjEJ0r9q7zx~pIAdGto7UROLsGrkDw0D7XhqdJH-qJLRefuJ1B2eMEJi0j9aEM-~tFl3afE2QEdKV6w__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
+- [3] K. H. Hanif and N. R. Muntiari, “Penerapan Algoritma Decision Tree, SVM, Naïve Bayes Dalam Deteksi Stunting Pada Balita,” Methomika: Jurnal Penelitian dan Ilmu Komputer, Vol. 8 No. 1, April 2024. [Online](https://ejurnal.methodist.ac.id/index.php/methomika/article/view/2774)
 ## Business Understanding
 
 Bagian laporan ini mencakup:
@@ -29,7 +27,7 @@ Bagian laporan ini mencakup:
 - Apakah jumlah balita dalam setiap kategori status gizi seimbang? Jika tidak, bagaimana hal ini dapat memengaruhi performa model?
 
 ### Goals
-- Memahami pola-pola data utama yang relevan dengan status gizi balita.
+- Mengidentifikasi model machine learning terbaik untuk memprediksi status gizi balita berdasarkan evaluasi metrik performa seperti akurasi
 - Mengidentifikasi distribusi kategori status gizi dalam dataset melalui analisis visual
 
 ### Solution statements
@@ -225,7 +223,7 @@ Model Random Forest dan KNN dengan akurasi 99%, adalah model terbaik berdasarkan
 
 2. **Mencapai Goals :**
    - Sistem prediksi dengan akurasi tinggi telah dibuat, memberikan hasil yang relevan untuk deteksi dini stunting.
-   - Pola data utama telah diidentifikasi melalui visualisasi dan analisis statistik.
+   - Distribusi kategori status gizi balita dalam dataset menunjukkan mayoritas balita, yaitu sebesar 54.6% berada dalam kategori normal, yang mencerminkan pertumbuhan balita yang sesuai. Sebaliknya, kategori severely stunted mencakup 16.5% dari total populasi, yang merupakan kondisi serius dengan pertumbuhan balita sangat terhambat. Selain itu, 11.2% balita berada dalam kategori stunted, yang juga menunjukkan hambatan pertumbuhan meskipun tidak separah kategori “severely stunted”. Sementara itu, sebanyak 17.7% balita berada dalam kategori tinggi, yang berarti tinggi badan mereka berada di atas rata-rata .
 
 3. **Implementasi Solusi :**
 - Model ini dapat diterapkan dalam sistem kesehatan berbasis data untuk mendukung pengambilan keputusan yang cepat dan akurat oleh tenaga kesehatan.
